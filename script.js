@@ -70,3 +70,17 @@ function handle(choice){
 			break;
 	};
 };
+
+//Note - Function to display a task
+function listTasks(){
+	console.log(`\nYour To Do List`) //Shows to do list
+	if(information.length === 0){ //If task list is empty run code
+		console.log('No tasks found');
+	}else{
+		information.forEach((task, idx) => { //Id items in task list show each task
+				const status = task.done ? 'Complete' : 'Not COmplete'
+				console.log(`${idx + 1}. (${Status} ${task.text})`);
+		})
+	}
+	showMenu();
+}
